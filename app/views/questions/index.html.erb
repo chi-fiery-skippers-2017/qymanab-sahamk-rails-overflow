@@ -1,0 +1,9 @@
+<div class="questions-container">
+  <h1>Questions</h1>
+  <% @questions.each do |question| %>
+    <div class="question-wrapper">
+      <h3><%=link_to question.title, question  %></h3>
+      <small><%= question.created_at.strftime('%B %d %Y') %> </small>
+    </div>
+  <%end  %>
+</div>
