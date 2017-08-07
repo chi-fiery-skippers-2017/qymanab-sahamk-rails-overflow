@@ -1,0 +1,6 @@
+<div class="question-container">
+    <h1><%= @question.title %></h1>
+    <small class="date"> Submitted at: <%= time_ago_in_words(@question.created_at) %> ago </small>
+
+    <p><%= @question.body %> </p>
+</div>
