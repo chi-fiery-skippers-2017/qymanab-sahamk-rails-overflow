@@ -4,3 +4,12 @@
 
     <p><%= @question.body %> </p>
 </div>
+
+<div class="answers">
+  <hr>
+  <h2><%= @question.answers.count %> Answers: </h2>
+  <%= render @question.answers %>
+
+  <h3>Add an Answer:</h3>
+  <%= render 'answers/form' %>
+</div>
