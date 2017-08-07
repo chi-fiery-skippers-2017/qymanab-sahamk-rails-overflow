@@ -1,5 +1,5 @@
 <div class="answer-wrapper">
-  <%= form_for ([@question, @question.answers.build]) do |f| %>
+  <%= form_for([@question, @question.answers.build]) do |f| %>
     <p>
       <%= f.label :body %>
       <%= f.text_area :body %>
