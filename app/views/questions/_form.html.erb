@@ -1,4 +1,15 @@
 <%= form_for @question do |f| %>
+  <% if @question.errors.any? %>
+    <div class="errors">
+      <b><%= pluralize(@question.errors.count, 'error') %> prohibited this form from being saved:</b>
+      <ul>
+        <% @question.errors.full_messages each do |error| %>
+        <li> <%= error %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <p>
     <%= f.label :title%>
     <%= f.text_field :title %>
