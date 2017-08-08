@@ -13,7 +13,7 @@
       <button class="button"><%= link_to 'Home', root_path %></button>
       <% if logged_in? %>
         <button class="button"><%= link_to 'Logout', logout_path%></button>
-       <button class="button"><%= link_to 'New Question', new_question_path %></button>
+       <button class="button"><%= link_to 'New Question', new_question_path, id: "new_question", remote: true %></button>
       <% else %>
         <button class="button"><%= link_to 'Sign Up', new_user_path %></button>
         <button class="button"><%= link_to 'Login', new_session_path %></button>
